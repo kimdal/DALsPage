@@ -6,22 +6,22 @@ class shape{
     this.w = 10;
     this.topspeed = 3;
   }
-  
+
   update(){
   this.acc.setMag(0.2);
   this.vel.add(this.acc);
   this.vel.limit(this.topspeed);
   this.pos.add(this.vel);
-  //this.acc.set(0, 0);
+  this.acc.set(0, 0);
   }
-  
+
   display() {
   fill(255);
   stroke(255);
   strokeWeight(1);
   ellipse(this.pos.x, this.pos.y, this.w, this.w);
     }
-  
+
     miniEdges(){
     noFill();
     noStroke();
